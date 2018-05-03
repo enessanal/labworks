@@ -1,0 +1,91 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+
+sudo apt-get install net-tools
+sudo apt-get install htop
+sudo apt-get install tree
+sudo apt-get install neofetch 
+sudo apt-get install gnome-tweak-tool
+sudo apt-get install gksu
+sudo apt-get install gparted
+sudo apt-get install bleachbit
+sudo apt-get install wireshark
+sudo apt-get install tshark
+sudo apt-get install git
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo npm install -g  nodemon
+sudo apt-get install apt-transport-https 
+sudo apt-get install nginx
+sudo apt-get install apache2-utils 
+sudo apt-get install mongodb
+
+
+
+
+
+### Personalization
+-----------------------------------------------------------------------------------------------------------------------------------
+
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+
+echo "alias cls='clear'" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias lockscreen='gnome-screensaver-command -l'"  | sudo tee --append /etc/bash.bashrc > /dev/null
+
+echo "alias ll=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFh --color=always\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias lls=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhS --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias llsr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhSr --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias llt=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFht --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias lltr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhtr --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+### Java 8
+-----------------------------------------------------------------------------------------------------------------------------------
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update && sudo apt-get install oracle-java8-installer 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+### Elasticsearch & Kibana & Logstash & FileBeat
+-----------------------------------------------------------------------------------------------------------------------------------
+
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt-get update && sudo apt-get install elasticsearch
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo apt-get update && sudo apt-get install elasticsearch
+sudo update-rc.d elasticsearch defaults 95 10
+sudo service elasticsearch start
+
+sudo apt-get install kibana
+sudo update-rc.d kibana defaults 95 9
+sudo service kibana start
+
+sudo apt-get install logstash
+sudo apt-get install filebeat
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+sudo htpasswd -c /etc/nginx/htpasswd.users kibanaadmin
+sudo htpasswd /etc/nginx/htpasswd.users admin
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+

@@ -1,0 +1,54 @@
+C:\Users\ASUS\logstash-6.2.4\bin\logstash.bat -f C:\Users\ASUS\logstash-6.2.4\bin\00myconf.conf
+
+
+
+logstash -f C:\Users\ASUS\Documents\GitHub\labworks\Logstash\logstash.conf
+
+logstash -f C:\Users\ASUS\Documents\GitHub\labworks\Logstash\server.conf --path.data %logstash_path%\data2
+
+
+
+# input 
+# { 
+#     file
+#     {
+#         path => "C:\Users\ASUS\Documents\GitHub\newpp.csv"
+#         start_position => "beginning"
+#     }
+# } 
+# filter
+# {
+#     csv
+#     {
+#         source => "message"
+#         columns => ["frame.protocols","frame.time","frame.len"]
+#     }    
+#     mutate
+#     {
+#         replace => [ "message", " " ]
+#     }
+#     mutate 
+#     {
+#         replace => [ "path", " " ]
+#     }
+
+#     mutate 
+#     {
+#         replace => [ "host", " " ]
+#     }
+#     mutate
+#     {
+#         remove_field => ["{message}"]
+    
+#     }
+# }
+# output 
+# {
+#      tcp 
+#      {
+#         host => "127.0.0.1"
+#         port => 8001
+#         #codec => "json"
+#         #codec => line { format => "hello" }
+#      }
+# }

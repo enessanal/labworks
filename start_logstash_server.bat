@@ -1,0 +1,1 @@
+logstash -f C:\Users\ASUS\Documents\GitHub\labworks\Logstash\server.conf --path.data %logstash_path%\data2
