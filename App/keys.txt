@@ -1,0 +1,516 @@
+_index
+_type
+_score
+_source
+layers
+frame
+frame.interface_id
+frame.interface_id_tree
+frame.interface_name
+frame.encap_type
+frame.time
+frame.offset_shift
+frame.time_epoch
+frame.time_delta
+frame.time_delta_displayed
+frame.time_relative
+frame.number
+frame.len
+frame.cap_len
+frame.marked
+frame.ignored
+frame.protocols
+eth
+eth.dst
+eth.dst_tree
+eth.dst_resolved
+eth.addr
+eth.addr_resolved
+eth.lg
+eth.ig
+eth.src
+eth.src_tree
+eth.src_resolved
+eth.type
+eth.padding
+arp
+arp.hw.type
+arp.proto.type
+arp.hw.size
+arp.proto.size
+arp.opcode
+arp.src.hw_mac
+arp.src.proto_ipv4
+arp.dst.hw_mac
+arp.dst.proto_ipv4
+ip
+ip.version
+ip.hdr_len
+ip.dsfield
+ip.dsfield_tree
+ip.dsfield.dscp
+ip.dsfield.ecn
+ip.len
+ip.id
+ip.flags
+ip.flags_tree
+ip.flags.rb
+ip.flags.df
+ip.flags.mf
+ip.frag_offset
+ip.ttl
+ip.proto
+ip.checksum
+ip.checksum.status
+ip.src
+ip.addr
+ip.src_host
+ip.host
+ip.dst
+ip.dst_host
+udp
+udp.srcport
+udp.dstport
+udp.port
+udp.length
+udp.checksum
+udp.checksum.status
+udp.stream
+dns
+dns.id
+dns.flags
+dns.flags_tree
+dns.flags.response
+dns.flags.opcode
+dns.flags.truncated
+dns.flags.recdesired
+dns.flags.z
+dns.flags.checkdisable
+dns.count.queries
+dns.count.answers
+dns.count.auth_rr
+dns.count.add_rr
+Queries
+shavar.services.mozilla.com: type A, class IN
+dns.qry.name
+dns.qry.name.len
+dns.count.labels
+dns.qry.type
+dns.qry.class
+dns.response_to
+dns.time
+dns.flags.authoritative
+dns.flags.recavail
+dns.flags.authenticated
+dns.flags.rcode
+Answers
+shavar.services.mozilla.com: type CNAME, class IN, cname shavar.prod.mozaws.net
+dns.resp.name
+dns.resp.type
+dns.resp.class
+dns.resp.ttl
+dns.resp.len
+dns.cname
+shavar.prod.mozaws.net: type A, class IN, addr 52.25.138.199
+dns.a
+shavar.prod.mozaws.net: type A, class IN, addr 34.211.135.159
+shavar.prod.mozaws.net: type A, class IN, addr 52.39.109.100
+shavar.prod.mozaws.net: type A, class IN, addr 52.42.125.211
+shavar.prod.mozaws.net: type A, class IN, addr 52.35.21.241
+shavar.prod.mozaws.net: type A, class IN, addr 52.43.54.37
+Authoritative nameservers
+<Root>: type NS, class IN, ns g.root-servers.net
+dns.ns
+<Root>: type NS, class IN, ns f.root-servers.net
+<Root>: type NS, class IN, ns m.root-servers.net
+<Root>: type NS, class IN, ns h.root-servers.net
+<Root>: type NS, class IN, ns j.root-servers.net
+<Root>: type NS, class IN, ns k.root-servers.net
+<Root>: type NS, class IN, ns a.root-servers.net
+<Root>: type NS, class IN, ns b.root-servers.net
+<Root>: type NS, class IN, ns e.root-servers.net
+<Root>: type NS, class IN, ns d.root-servers.net
+<Root>: type NS, class IN, ns i.root-servers.net
+<Root>: type NS, class IN, ns c.root-servers.net
+<Root>: type NS, class IN, ns l.root-servers.net
+Additional records
+g.root-servers.net: type A, class IN, addr 192.112.36.4
+f.root-servers.net: type A, class IN, addr 192.5.5.241
+m.root-servers.net: type A, class IN, addr 202.12.27.33
+h.root-servers.net: type A, class IN, addr 198.97.190.53
+j.root-servers.net: type A, class IN, addr 192.58.128.30
+k.root-servers.net: type A, class IN, addr 193.0.14.129
+a.root-servers.net: type A, class IN, addr 198.41.0.4
+Destination GeoIP: AS16509 Amazon.com, Inc., United States, Boardman, OR, AS16509 Amazon.com, Inc., United States, Boardman, OR, 45.869598, -119.688004
+ip.geoip.dst_asnum
+ip.geoip.asnum
+ip.geoip.dst_country
+ip.geoip.country
+ip.geoip.dst_city
+ip.geoip.city
+ip.geoip.dst_lat
+ip.geoip.lat
+ip.geoip.dst_lon
+ip.geoip.lon
+tcp
+tcp.srcport
+tcp.dstport
+tcp.port
+tcp.stream
+tcp.len
+tcp.seq
+tcp.ack
+tcp.hdr_len
+tcp.flags
+tcp.flags_tree
+tcp.flags.res
+tcp.flags.ns
+tcp.flags.cwr
+tcp.flags.ecn
+tcp.flags.urg
+tcp.flags.ack
+tcp.flags.push
+tcp.flags.reset
+tcp.flags.syn
+tcp.flags.syn_tree
+_ws.expert
+_ws.expert.message
+_ws.expert.severity
+_ws.expert.group
+tcp.flags.fin
+tcp.flags.str
+tcp.window_size_value
+tcp.window_size
+tcp.checksum
+tcp.checksum.status
+tcp.urgent_pointer
+tcp.options
+tcp.options_tree
+tcp.options.mss
+tcp.options.mss_tree
+tcp.option_kind
+tcp.option_len
+tcp.options.mss_val
+tcp.options.sack_perm
+tcp.options.sack_perm_tree
+tcp.options.timestamp
+tcp.options.timestamp_tree
+tcp.options.timestamp.tsval
+tcp.options.timestamp.tsecr
+tcp.options.nop
+tcp.options.nop_tree
+tcp.options.wscale
+tcp.options.wscale_tree
+tcp.options.wscale.shift
+tcp.options.wscale.multiplier
+Source GeoIP: AS16509 Amazon.com, Inc., United States, Boardman, OR, AS16509 Amazon.com, Inc., United States, Boardman, OR, 45.869598, -119.688004
+ip.geoip.src_asnum
+ip.geoip.src_country
+ip.geoip.src_city
+ip.geoip.src_lat
+ip.geoip.src_lon
+tcp.analysis
+tcp.analysis.acks_frame
+tcp.analysis.ack_rtt
+tcp.window_size_scalefactor
+tcp.analysis.initial_rtt
+tcp.nxtseq
+tcp.analysis.bytes_in_flight
+tcp.analysis.push_bytes_sent
+tcp.payload
+ssl
+ssl.record
+ssl.record.content_type
+ssl.record.version
+ssl.record.length
+ssl.handshake
+ssl.handshake.type
+ssl.handshake.length
+ssl.handshake.version
+ssl.handshake.random
+ssl.handshake.random_tree
+ssl.handshake.random_time
+ssl.handshake.random_bytes
+ssl.handshake.session_id_length
+ssl.handshake.cipher_suites_length
+ssl.handshake.ciphersuites
+ssl.handshake.ciphersuite
+ssl.handshake.comp_methods_length
+ssl.handshake.comp_methods
+ssl.handshake.comp_method
+ssl.handshake.extensions_length
+Extension: server_name (len=32)
+ssl.handshake.extension.type
+ssl.handshake.extension.len
+Server Name Indication extension
+ssl.handshake.extensions_server_name_list_len
+ssl.handshake.extensions_server_name_type
+ssl.handshake.extensions_server_name_len
+ssl.handshake.extensions_server_name
+Extension: extended_master_secret (len=0)
+Extension: renegotiation_info (len=1)
+Renegotiation Info extension
+ssl.handshake.extensions_reneg_info_len
+Extension: supported_groups (len=10)
+ssl.handshake.extensions_supported_groups_length
+ssl.handshake.extensions_supported_groups
+ssl.handshake.extensions_supported_group
+Extension: ec_point_formats (len=2)
+ssl.handshake.extensions_ec_point_formats_length
+ssl.handshake.extensions_ec_point_formats
+ssl.handshake.extensions_ec_point_format
+Extension: SessionTicket TLS (len=0)
+Extension: application_layer_protocol_negotiation (len=14)
+ssl.handshake.extensions_alpn_len
+ssl.handshake.extensions_alpn_list
+ssl.handshake.extensions_alpn_str_len
+ssl.handshake.extensions_alpn_str
+Extension: status_request (len=5)
+ssl.handshake.extensions_status_request_type
+ssl.handshake.extensions_status_request_responder_ids_len
+ssl.handshake.extensions_status_request_exts_len
+Extension: signature_algorithms (len=24)
+ssl.handshake.sig_hash_alg_len
+ssl.handshake.sig_hash_algs
+ssl.handshake.sig_hash_alg
+ssl.handshake.sig_hash_alg_tree
+ssl.handshake.sig_hash_hash
+ssl.handshake.sig_hash_sig
+tcp.segment_data
+ssl.handshake.session_id
+Extension: ec_point_formats (len=4)
+tcp.segments
+tcp.segment
+tcp.segment.count
+tcp.reassembled.length
+tcp.reassembled.data
+ssl.app_data
+Destination GeoIP: AS15169 Google Inc., United States, AS15169 Google Inc., United States, 37.750999, -97.821999
+icmp
+icmp.type
+icmp.code
+icmp.checksum
+icmp.checksum.status
+icmp.ident
+icmp.seq
+icmp.seq_le
+icmp.data_time
+icmp.data_time_relative
+data
+data.data
+data.len
+Source GeoIP: AS15169 Google Inc., United States, AS15169 Google Inc., United States, 37.750999, -97.821999
+icmp.resp_to
+icmp.resptime
+tcp.analysis.flags
+Destination GeoIP: AS41231 Canonical Ltd, United Kingdom, London, H9, AS41231 Canonical Ltd, United Kingdom, London, H9, 51.509201, -0.095500
+ntp
+ntp.flags
+ntp.flags_tree
+ntp.flags.li
+ntp.flags.vn
+ntp.flags.mode
+ntp.stratum
+ntp.ppoll
+ntp.precision
+ntp.rootdelay
+ntp.rootdispersion
+ntp.refid
+ntp.reftime
+ntp.org
+ntp.rec
+ntp.xmt
+Source GeoIP: AS41231 Canonical Ltd, United Kingdom, London, H9, AS41231 Canonical Ltd, United Kingdom, London, H9, 51.509201, -0.095500
+tiles.services.mozilla.com: type A, class IN
+tiles.services.mozilla.com: type AAAA, class IN
+tiles.services.mozilla.com: type CNAME, class IN, cname tiles.r53-2.services.mozilla.com
+b.root-servers.net: type A, class IN, addr 199.9.14.201
+e.root-servers.net: type A, class IN, addr 192.203.230.10
+d.root-servers.net: type A, class IN, addr 199.7.91.13
+i.root-servers.net: type A, class IN, addr 192.36.148.17
+c.root-servers.net: type A, class IN, addr 192.33.4.12
+l.root-servers.net: type A, class IN, addr 199.7.83.42
+tiles.r53-2.services.mozilla.com: type AAAA, class IN
+snippets.cdn.mozilla.net: type A, class IN
+snippets.cdn.mozilla.net: type AAAA, class IN
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.41.78.152
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 34.211.99.53
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.25.175.166
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.39.131.77
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.40.133.43
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.32.92.108
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.34.107.172
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 54.191.90.208
+snippets.cdn.mozilla.net: type CNAME, class IN, cname drcwo519tnci7.cloudfront.net
+drcwo519tnci7.cloudfront.net: type AAAA, class IN
+drcwo519tnci7.cloudfront.net: type A, class IN, addr 54.230.46.191
+Destination GeoIP: AS16509 Amazon.com, Inc., United States, Seattle, WA, AS16509 Amazon.com, Inc., United States, Seattle, WA, 47.542000, -122.312302
+Source GeoIP: AS16509 Amazon.com, Inc., United States, Seattle, WA, AS16509 Amazon.com, Inc., United States, Seattle, WA, 47.542000, -122.312302
+Extension: server_name (len=29)
+Extension: server_name (len=31)
+Extension: server_name (len=0)
+Extension: status_request (len=0)
+Extension: application_layer_protocol_negotiation (len=11)
+ssl.handshake.cert_status_type
+ssl.handshake.cert_status
+ssl.handshake.cert_status_len
+ocsp
+ocsp.responseStatus
+ocsp.responseBytes_element
+ocsp.responseType.id
+ocsp.BasicOCSPResponse_element
+ocsp.tbsResponseData_element
+ocsp.responderID
+ocsp.responderID_tree
+ocsp.byKey
+ocsp.producedAt
+ocsp.responses
+ocsp.responses_tree
+ocsp.SingleResponse_element
+ocsp.certID_element
+ocsp.hashAlgorithm_element
+x509af.algorithm.id
+ocsp.issuerNameHash
+ocsp.issuerKeyHash
+ber.64bit_uint_as_bytes
+ocsp.certStatus
+ocsp.certStatus_tree
+ocsp.thisUpdate
+ocsp.nextUpdate
+ocsp.signatureAlgorithm_element
+ber.bitstring.padding
+ocsp.signature
+ns1.google.com: type A, class IN
+ns1.google.com: type AAAA, class IN
+www.google.com.tr: type A, class IN
+www.youtube.com: type A, class IN
+www.youtube.com: type AAAA, class IN
+www.google.com.tr: type AAAA, class IN
+ns1.google.com: type A, class IN, addr 192.168.0.1
+www.youtube.com: type CNAME, class IN, cname youtube-ui.l.google.com
+youtube-ui.l.google.com: type CNAME, class IN, cname wide-youtube.l.google.com
+wide-youtube.l.google.com: type A, class IN, addr 173.194.220.198
+www.facebook.com: type A, class IN
+www.facebook.com: type AAAA, class IN
+www.google.com.tr: type A, class IN, addr 64.233.162.94
+wide-youtube.l.google.com: type AAAA, class IN, addr 2a00:1450:4010:c06::c6
+dns.aaaa
+www.wikipedia.org: type A, class IN
+www.wikipedia.org: type AAAA, class IN
+www.facebook.com: type CNAME, class IN, cname star-mini.c10r.facebook.com
+star-mini.c10r.facebook.com: type A, class IN, addr 185.60.216.35
+star-mini.c10r.facebook.com: type AAAA, class IN, addr 2a03:2880:f12d:83:face:b00c:0:25de
+code.visualstudio.com: type A, class IN
+code.visualstudio.com: type AAAA, class IN
+www.google.com.tr: type AAAA, class IN, addr 2a00:1450:4010:c0a::5e
+whatismyipaddress.com: type A, class IN
+whatismyipaddress.com: type AAAA, class IN
+Destination GeoIP: AS15169 Google Inc., United States, Mountain View, CA, AS15169 Google Inc., United States, Mountain View, CA, 37.419201, -122.057404
+www.wikipedia.org: type A, class IN, addr 91.198.174.192
+www.wikipedia.org: type AAAA, class IN, addr 2620:0:862:ed1a::1
+Source GeoIP: AS15169 Google Inc., United States, Mountain View, CA, AS15169 Google Inc., United States, Mountain View, CA, 37.419201, -122.057404
+www.mozilla.org: type A, class IN
+Extension: server_name (len=20)
+www.mozilla.org: type AAAA, class IN
+whatismyipaddress.com: type AAAA, class IN, addr 2400:cb00:2048:1::6810:1060
+whatismyipaddress.com: type AAAA, class IN, addr 2400:cb00:2048:1::6810:1460
+whatismyipaddress.com: type AAAA, class IN, addr 2400:cb00:2048:1::6810:1160
+whatismyipaddress.com: type AAAA, class IN, addr 2400:cb00:2048:1::6810:1260
+whatismyipaddress.com: type AAAA, class IN, addr 2400:cb00:2048:1::6810:1360
+whatismyipaddress.com: type A, class IN, addr 104.16.16.96
+whatismyipaddress.com: type A, class IN, addr 104.16.17.96
+whatismyipaddress.com: type A, class IN, addr 104.16.19.96
+whatismyipaddress.com: type A, class IN, addr 104.16.18.96
+whatismyipaddress.com: type A, class IN, addr 104.16.20.96
+Extension: application_layer_protocol_negotiation (len=5)
+clients1.google.com: type A, class IN
+www.mozilla.org: type CNAME, class IN, cname www.mozilla.org.cdn.cloudflare.net
+www.mozilla.org.cdn.cloudflare.net: type AAAA, class IN, addr 2400:cb00:2048:1::6810:2902
+www.mozilla.org.cdn.cloudflare.net: type AAAA, class IN, addr 2400:cb00:2048:1::6810:2802
+www.mozilla.org.cdn.cloudflare.net: type A, class IN, addr 104.16.41.2
+www.mozilla.org.cdn.cloudflare.net: type A, class IN, addr 104.16.40.2
+clients1.google.com: type CNAME, class IN, cname clients.l.google.com
+clients.l.google.com: type A, class IN, addr 216.58.211.142
+code.visualstudio.com: type CNAME, class IN, cname vscode.trafficmanager.net
+vscode.trafficmanager.net: type CNAME, class IN, cname vscode-eastus.azurewebsites.net
+vscode-eastus.azurewebsites.net: type CNAME, class IN, cname waws-prod-blu-023.vip.azurewebsites.windows.net
+waws-prod-blu-023.vip.azurewebsites.windows.net: type CNAME, class IN, cname waws-prod-blu-023.cloudapp.net
+waws-prod-blu-023.cloudapp.net: type A, class IN, addr 191.236.59.67
+waws-prod-blu-023.cloudapp.net: type AAAA, class IN
+http
+POST /ocsp HTTP/1.1\r\n
+http.request.method
+http.request.uri
+http.request.version
+http.host
+http.request.line
+http.user_agent
+http.accept
+http.accept_language
+http.accept_encoding
+http.content_length_header
+http.content_length_header_tree
+http.content_length
+http.content_type
+http.connection
+http.request.full_uri
+http.request
+http.request_number
+http.file_data
+ocsp.tbsRequest_element
+ocsp.requestList
+ocsp.requestList_tree
+ocsp.Request_element
+ocsp.reqCert_element
+ocsp.serialNumber
+HTTP/1.1 200 OK\r\n
+http.response.code
+http.response.code.desc
+http.response.phrase
+http.response.line
+http.date
+http.cache_control
+http.server
+http.response
+http.response_number
+http.time
+http.request_in
+s.ytimg.com: type A, class IN
+s.ytimg.com: type AAAA, class IN
+s.ytimg.com: type CNAME, class IN, cname ytstatic.l.google.com
+ytstatic.l.google.com: type A, class IN, addr 216.58.211.142
+ytstatic.l.google.com: type AAAA, class IN, addr 2a00:1450:400f:80c::200e
+Extension: server_name (len=16)
+tcp.flags.fin_tree
+tcp.flags.reset_tree
+fonts.googleapis.com: type A, class IN
+i.ytimg.com: type A, class IN
+fonts.googleapis.com: type AAAA, class IN
+i.ytimg.com: type AAAA, class IN
+i.ytimg.com: type CNAME, class IN, cname ytimg-edge-static.l.google.com
+ytimg-edge-static.l.google.com: type AAAA, class IN, addr 2a00:1450:400f:80a::2016
+ytimg-edge-static.l.google.com: type A, class IN, addr 216.58.209.150
+ytimg-edge-static.l.google.com: type A, class IN, addr 216.58.207.246
+ytimg-edge-static.l.google.com: type A, class IN, addr 172.217.21.182
+ytimg-edge-static.l.google.com: type A, class IN, addr 216.58.207.214
+ytimg-edge-static.l.google.com: type A, class IN, addr 172.217.20.54
+ytimg-edge-static.l.google.com: type A, class IN, addr 172.217.21.150
+ytimg-edge-static.l.google.com: type A, class IN, addr 216.58.211.150
+fonts.googleapis.com: type CNAME, class IN, cname googleadapis.l.google.com
+googleadapis.l.google.com: type A, class IN, addr 216.58.207.202
+googleadapis.l.google.com: type AAAA, class IN, addr 2a00:1450:4010:c0a::5f
+Extension: server_name (len=25)
+ocsp.pki.goog: type A, class IN
+ocsp.pki.goog: type AAAA, class IN
+ocsp.pki.goog: type CNAME, class IN, cname www3.l.google.com
+www3.l.google.com: type AAAA, class IN, addr 2a00:1450:400f:80b::200e
+www3.l.google.com: type A, class IN, addr 216.58.207.206
+POST /GTSGIAG3 HTTP/1.1\r\n
+fonts.gstatic.com: type A, class IN
+udp.srcport_tree
+fonts.gstatic.com: type AAAA, class IN
+udp.dstport_tree
+fonts.gstatic.com: type CNAME, class IN, cname gstaticadssl.l.google.com
+gstaticadssl.l.google.com: type AAAA, class IN, addr 2a00:1450:400f:80a::2003
+gstaticadssl.l.google.com: type A, class IN, addr 216.58.207.195
+icmp.unused

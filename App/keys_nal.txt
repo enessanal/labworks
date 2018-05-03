@@ -1,0 +1,483 @@
+_index
+_type
+_score
+_source
+layers
+frame
+frame.interface_id
+frame.interface_id_tree
+frame.interface_name
+frame.encap_type
+frame.time
+frame.offset_shift
+frame.time_epoch
+frame.time_delta
+frame.time_delta_displayed
+frame.time_relative
+frame.number
+frame.len
+frame.cap_len
+frame.marked
+frame.ignored
+frame.protocols
+eth
+eth.dst
+eth.dst_tree
+eth.dst_resolved
+eth.addr
+eth.addr_resolved
+eth.lg
+eth.ig
+eth.src
+eth.src_tree
+eth.src_resolved
+eth.type
+ip
+ip.version
+ip.hdr_len
+ip.dsfield
+ip.dsfield_tree
+ip.dsfield.dscp
+ip.dsfield.ecn
+ip.len
+ip.id
+ip.flags
+ip.flags_tree
+ip.flags.rb
+ip.flags.df
+ip.flags.mf
+ip.frag_offset
+ip.ttl
+ip.proto
+ip.checksum
+ip.checksum.status
+ip.src
+ip.addr
+ip.src_host
+ip.host
+ip.dst
+ip.dst_host
+tcp
+tcp.srcport
+tcp.dstport
+tcp.port
+tcp.stream
+tcp.len
+tcp.seq
+tcp.nxtseq
+tcp.ack
+tcp.hdr_len
+tcp.flags
+tcp.flags_tree
+tcp.flags.res
+tcp.flags.ns
+tcp.flags.cwr
+tcp.flags.ecn
+tcp.flags.urg
+tcp.flags.ack
+tcp.flags.push
+tcp.flags.reset
+tcp.flags.syn
+tcp.flags.fin
+tcp.flags.str
+tcp.window_size_value
+tcp.window_size
+tcp.window_size_scalefactor
+tcp.checksum
+tcp.checksum.status
+tcp.urgent_pointer
+tcp.analysis
+tcp.analysis.initial_rtt
+tcp.analysis.bytes_in_flight
+tcp.analysis.push_bytes_sent
+tcp.payload
+data
+data.data
+data.len
+tcp.analysis.acks_frame
+tcp.analysis.ack_rtt
+eth.padding
+eth.len
+llc
+llc.dsap
+llc.dsap_tree
+llc.dsap.sap
+llc.dsap.ig
+llc.ssap
+llc.ssap_tree
+llc.ssap.sap
+llc.ssap.cr
+llc.control
+llc.control_tree
+llc.control.u_modifier_cmd
+llc.control.ftype
+llc.oui
+llc.pid
+udp
+udp.srcport
+udp.dstport
+udp.port
+udp.length
+udp.checksum
+udp.checksum.status
+udp.stream
+ssl
+ssl.record
+ssl.record.content_type
+ssl.record.version
+ssl.record.length
+ssl.app_data
+tcp.flags.reset_tree
+_ws.expert
+_ws.expert.message
+_ws.expert.severity
+_ws.expert.group
+tcp.options
+tcp.options_tree
+tcp.options.nop
+tcp.options.nop_tree
+tcp.option_kind
+tcp.options.timestamp
+tcp.options.timestamp_tree
+tcp.option_len
+tcp.options.timestamp.tsval
+tcp.options.timestamp.tsecr
+tcp.segment_data
+tcp.segments
+tcp.segment
+tcp.segment.count
+tcp.reassembled.length
+tcp.reassembled.data
+tcp.analysis.flags
+tcp.flags.syn_tree
+tcp.options.mss
+tcp.options.mss_tree
+tcp.options.mss_val
+tcp.options.wscale
+tcp.options.wscale_tree
+tcp.options.wscale.shift
+tcp.options.wscale.multiplier
+tcp.options.sack_perm
+tcp.options.sack_perm_tree
+tcp.options.eol
+tcp.options.eol_tree
+ssl.handshake
+ssl.handshake.type
+ssl.handshake.length
+ssl.handshake.version
+ssl.handshake.random
+ssl.handshake.random_tree
+ssl.handshake.random_time
+ssl.handshake.random_bytes
+ssl.handshake.session_id_length
+ssl.handshake.cipher_suites_length
+ssl.handshake.ciphersuites
+ssl.handshake.ciphersuite
+ssl.handshake.comp_methods_length
+ssl.handshake.comp_methods
+ssl.handshake.comp_method
+ssl.handshake.extensions_length
+Extension: ec_point_formats (len=4)
+ssl.handshake.extension.type
+ssl.handshake.extension.len
+ssl.handshake.extensions_ec_point_formats_length
+ssl.handshake.extensions_ec_point_formats
+ssl.handshake.extensions_ec_point_format
+Extension: supported_groups (len=28)
+ssl.handshake.extensions_supported_groups_length
+ssl.handshake.extensions_supported_groups
+ssl.handshake.extensions_supported_group
+Extension: signature_algorithms (len=32)
+ssl.handshake.sig_hash_alg_len
+ssl.handshake.sig_hash_algs
+ssl.handshake.sig_hash_alg
+ssl.handshake.sig_hash_alg_tree
+ssl.handshake.sig_hash_hash
+ssl.handshake.sig_hash_sig
+Extension: heartbeat (len=1)
+ssl.handshake.extension.heartbeat.mode
+tcp.flags.fin_tree
+arp
+arp.hw.type
+arp.proto.type
+arp.hw.size
+arp.proto.size
+arp.opcode
+arp.src.hw_mac
+arp.src.proto_ipv4
+arp.dst.hw_mac
+arp.dst.proto_ipv4
+tcp.pdu.size
+ldap
+ldap.sasl_buffer_length
+SASL Buffer
+gss-api
+spnego.krb5.blob
+spnego.krb5.blob_tree
+spnego.krb5.tok_id
+spnego.krb5.cfx_flags
+spnego.krb5.cfx_flags_tree
+spnego.krb5.acceptor_subkey
+spnego.krb5.sealed
+spnego.krb5.send_by_acceptor
+spnego.krb5.filler
+spnego.krb5.cfx_ec
+spnego.krb5.cfx_rrc
+spnego.krb5.cfx_seq
+spnego.krb5.sgn_cksum
+GSS-API payload (386 bytes)
+ldap.LDAPMessage_element
+ldap.messageID
+ldap.protocolOp
+ldap.protocolOp_tree
+ldap.searchRequest_element
+ldap.baseObject
+ldap.scope
+ldap.derefAliases
+ldap.sizeLimit
+ldap.timeLimit
+ldap.typesOnly
+Filter: (&(|(objectClass=user)(&(objectClass=group)(groupType<=0)))(sAMAccountName=ESX Admins))
+ldap.filter
+ldap.filter_tree
+and: (&(|(objectClass=user)(&(objectClass=group)(groupType<=0)))(sAMAccountName=ESX Admins))
+ldap.and
+ldap.and_tree
+Filter: (|(objectClass=user)(&(objectClass=group)(groupType<=0)))
+ldap.and_item
+ldap.and_item_tree
+or: (|(objectClass=user)(&(objectClass=group)(groupType<=0)))
+ldap.or
+ldap.or_tree
+Filter: (objectClass=user)
+ldap.or_item
+ldap.or_item_tree
+ldap.equalityMatch_element
+ldap.attributeDesc
+ldap.assertionValue
+Filter: (&(objectClass=group)(groupType<=0))
+and: (&(objectClass=group)(groupType<=0))
+Filter: (objectClass=group)
+Filter: (groupType<=0)
+ldap.lessOrEqual_element
+Filter: (sAMAccountName=ESX Admins)
+or: (sAMAccountName=ESX Admins)
+ldap.attributes
+ldap.attributes_tree
+ldap.AttributeDescription
+GSS-API payload (282 bytes)
+ldap.searchResDone_element
+ldap.resultCode
+ldap.response_to
+ldap.time
+kerberos
+kerberos.as_req_element
+kerberos.pvno
+kerberos.msg_type
+kerberos.req_body_element
+ber.bitstring.padding
+kerberos.kdc_options
+kerberos.kdc_options_tree
+kerberos.reserved
+kerberos.forwardable
+kerberos.forwarded
+kerberos.proxiable
+kerberos.proxy
+kerberos.allow-postdate
+kerberos.postdated
+kerberos.unused7
+kerberos.renewable
+kerberos.unused9
+kerberos.unused10
+kerberos.opt-hardware-auth
+kerberos.request-anonymous
+kerberos.canonicalize
+kerberos.constrained-delegation
+kerberos.disable-transited-check
+kerberos.renewable-ok
+kerberos.enc-tkt-in-skey
+kerberos.renew
+kerberos.validate
+kerberos.cname_element
+kerberos.name_type
+kerberos.cname_string
+kerberos.cname_string_tree
+kerberos.CNameString
+kerberos.realm
+kerberos.sname_element
+kerberos.sname_string
+kerberos.sname_string_tree
+kerberos.SNameString
+kerberos.from
+kerberos.till
+kerberos.nonce
+kerberos.etype
+kerberos.etype_tree
+kerberos.ENCTYPE
+kerberos.krb_error_element
+kerberos.stime
+kerberos.susec
+kerberos.error_code
+kerberos.e_data
+kerberos.e_data_tree
+kerberos.PA_DATA_element
+kerberos.padata_type
+kerberos.padata_type_tree
+dns
+dns.id
+dns.flags
+dns.flags_tree
+dns.flags.response
+dns.flags.opcode
+dns.flags.truncated
+dns.flags.recdesired
+dns.flags.z
+dns.flags.checkdisable
+dns.count.queries
+dns.count.answers
+dns.count.auth_rr
+dns.count.add_rr
+Queries
+_kerberos-master._udp.SIBERLAB.LOCAL: type SRV, class IN
+dns.qry.name
+dns.qry.name.len
+dns.count.labels
+dns.qry.type
+dns.qry.class
+dns.response_to
+dns.time
+dns.flags.authoritative
+dns.flags.recavail
+dns.flags.authenticated
+dns.flags.rcode
+Authoritative nameservers
+siberlab.local: type SOA, class IN, mname dc.siberlab.local
+dns.resp.name
+dns.resp.type
+dns.resp.class
+dns.resp.ttl
+dns.resp.len
+dns.soa.mname
+dns.soa.rname
+dns.soa.serial_number
+dns.soa.refresh_interval
+dns.soa.retry_interval
+dns.soa.expire_limit
+dns.soa.mininum_ttl
+kerberos.padata
+kerberos.padata_tree
+kerberos.padata_value
+kerberos.padata_value_tree
+kerberos.cipher
+Record Mark: 250 bytes
+kerberos.rm.reserved
+kerberos.rm.length
+Record Mark: 1490 bytes
+kerberos.as_rep_element
+kerberos.ETYPE_INFO2_ENTRY_element
+kerberos.salt
+kerberos.crealm
+kerberos.ticket_element
+kerberos.tkt_vno
+kerberos.enc_part_element
+kerberos.kvno
+_kerberos-master._tcp.SIBERLAB.LOCAL: type SRV, class IN
+kerberos.tgs_req_element
+kerberos.ap_req_element
+kerberos.ap_options
+kerberos.ap_options_tree
+kerberos.use-session-key
+kerberos.mutual-required
+kerberos.authenticator_element
+kerberos.tgs_rep_element
+ldap.bindRequest_element
+ldap.version
+ldap.authentication
+ldap.authentication_tree
+ldap.sasl_element
+ldap.mechanism
+ldap.credentials
+gss-api.OID
+spnego
+spnego.negTokenInit_element
+spnego.mechTypes
+spnego.mechTypes_tree
+spnego.MechType
+spnego.mechToken
+spnego.krb5_oid
+ldap.bindResponse_element
+ldap.serverSaslCreds
+spnego.negTokenTarg_element
+spnego.negResult
+spnego.supportedMech
+spnego.responseToken
+kerberos.ap_rep_element
+GSS-API payload (77 bytes)
+Filter: (sAMAccountName=ESXI225$)
+GSS-API payload (1896 bytes)
+GSS-API payload (7 bytes)
+tcp.ack_tree
+tiles.services.mozilla.com: type A, class IN
+tiles.services.mozilla.com: type AAAA, class IN
+Answers
+tiles.services.mozilla.com: type CNAME, class IN, cname tiles.r53-2.services.mozilla.com
+dns.cname
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 35.160.58.123
+dns.a
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 35.160.98.184
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 35.161.241.69
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.41.78.152
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.89.83.46
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 34.211.99.53
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 34.216.56.160
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 34.216.156.21
+Destination GeoIP: AS16509 Amazon.com, Inc., United States, Boardman, OR, AS16509 Amazon.com, Inc., United States, Boardman, OR, 45.869598, -119.688004
+ip.geoip.dst_asnum
+ip.geoip.asnum
+ip.geoip.dst_country
+ip.geoip.country
+ip.geoip.dst_city
+ip.geoip.city
+ip.geoip.dst_lat
+ip.geoip.lat
+ip.geoip.dst_lon
+ip.geoip.lon
+Source GeoIP: AS16509 Amazon.com, Inc., United States, Boardman, OR, AS16509 Amazon.com, Inc., United States, Boardman, OR, 45.869598, -119.688004
+ip.geoip.src_asnum
+ip.geoip.src_country
+ip.geoip.src_city
+ip.geoip.src_lat
+ip.geoip.src_lon
+GSS-API payload (383 bytes)
+Filter: (&(|(objectClass=user)(&(objectClass=group)(groupType<=0)))(sAMAccountName=fkayran))
+and: (&(|(objectClass=user)(&(objectClass=group)(groupType<=0)))(sAMAccountName=fkayran))
+Filter: (sAMAccountName=fkayran)
+or: (sAMAccountName=fkayran)
+GSS-API payload (847 bytes)
+tiles.r53-2.services.mozilla.com: type A, class IN, addr 52.39.131.77
+Extension: server_name (len=31)
+Server Name Indication extension
+ssl.handshake.extensions_server_name_list_len
+ssl.handshake.extensions_server_name_type
+ssl.handshake.extensions_server_name_len
+ssl.handshake.extensions_server_name
+Extension: extended_master_secret (len=0)
+Extension: renegotiation_info (len=1)
+Renegotiation Info extension
+ssl.handshake.extensions_reneg_info_len
+Extension: supported_groups (len=10)
+Extension: ec_point_formats (len=2)
+Extension: SessionTicket TLS (len=0)
+Extension: application_layer_protocol_negotiation (len=14)
+ssl.handshake.extensions_alpn_len
+ssl.handshake.extensions_alpn_list
+ssl.handshake.extensions_alpn_str_len
+ssl.handshake.extensions_alpn_str
+Extension: status_request (len=5)
+ssl.handshake.extensions_status_request_type
+ssl.handshake.extensions_status_request_responder_ids_len
+ssl.handshake.extensions_status_request_exts_len
+Extension: signature_algorithms (len=24)
+ssl.handshake.session_id
+tcp.analysis.rto
+tcp.analysis.rto_frame

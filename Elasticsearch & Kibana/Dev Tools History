@@ -1,0 +1,589 @@
+GET packets-2018-04-05/_search
+{
+  "query": 
+  { 
+    "match":
+    {
+      "layers.frame.frame_frame_protocols": "eth:ethertype:arp"
+    }
+  },
+  "size":100
+}
+
+
+
+
+
+GET packets-*/_search
+{
+    "query": {
+        "range" : {
+            "timestamp" : {
+                "gte": "2018-01-01 00:00:00", 
+                "lte": "now",
+                "time_zone": "+01:00"
+            }
+        }
+    }
+}
+
+
+GET packets-2018-04-05/_search
+{
+    "query": 
+    {
+        "range" : 
+        {
+            "timestamp" : 
+            {
+                "gte": "2018-04-04T09:40:49"
+            }
+        }
+    },
+  "_source":
+  [
+    "layers.frame.frame_frame_protocols","timestamp"
+  ]
+}
+
+
+GET packets-2018-04-05/_search
+{
+    "query": 
+    {
+      "match":
+      {
+        "timestamp" : "2018-04-04T09:40:49"
+      }
+    },
+  "_source":
+  [
+    "layers.frame.frame_frame_protocols","timestamp"
+  ]
+}
+
+
+
+GET /packets-2018-04-05/_search
+{
+  "query": 
+  { 
+    "match_all":{}
+  },
+  "_source":
+  [
+    "layers.frame.frame_frame_protocols","timestamp"
+  ],
+  "sort":{"timestamp":"desc"}
+}
+
+
+
+
+GET packets-2018-04-05/_search
+{
+  "size": 0,
+  "aggs": 
+  {
+    "group_by_state":
+    {
+      "terms": 
+      {
+        "field":"layers.frame.frame_frame_protocols"
+      }
+    }
+  }
+}
+
+GET /packets-2018-04-05/_search
+{
+  "query": 
+  {
+    "match_all": {}
+  },
+  "_source":
+  [
+    "layers.frame_frame_protocols"
+  ]
+}
+
+GET _cat/indices?v
+GET _template
+GET _alias
+
+
+GET packets-2018-04-03/_search
+{
+  "query": 
+  {
+    "match_all": {}
+  }
+}
+GET packets-2018-04-03/_search
+{
+  "query": 
+  {
+    "match_all": {}
+  },
+  "_source": ["layers.http.http_http_host"],
+  "size": 100
+  
+}
+
+GET packets-2018-04-03/_search
+{
+  "query": 
+  {
+    "match": 
+    {
+      "layers.frame.frame_frame_protocols":"eth:ethertype:ip:icmp:ip:udp:quic"
+    }
+  },
+  "_source": [],
+  "size": 100
+  
+}
+
+
+
+GET packets-2018-04-03/_search
+{
+  "query": 
+  {
+    "match_all": {}
+  },
+  "_source": 
+  [
+    "timestamp",
+    "layers.frame.frame_frame_protocols"
+  ],
+  "sort": 
+  {
+    "timestamp":"desc"
+  }
+}
+
+
+DELETE packets-2018-04-05
+GET _template
+DELETE _template/packets
+GET _template/packets
+
+
+
+
+GET _cat/indices
+GET packets-2018-04-03
+
+
+
+
+
+GET _alias/
+
+GET _template
+GET _cat/indices
+DELETE packets-webserver01-2018-04-05
+
+
+
+
+
+
+GET /bank/_doc/_search
+{
+    "query": 
+    {
+      "range" : 
+      {
+        "age" : 
+        {
+            "gte": "10",
+            "lte": "40"
+        }
+      }
+    },
+    "size":100
+}
+
+
+
+
+
+GET /bank/_doc/_search
+{
+    "query": 
+    {
+      "type":
+      {
+        "value":"_doc"
+      }
+    }
+}
+
+GET _cat/indices
+
+GET ddosset/_search
+
+GET ddosset/_search
+{
+  "sort": [
+    {
+      "number": {
+        "order": "asc"
+      }
+    }
+  ],
+  "_source": ["number","total_packets"]
+}
+
+
+
+
+GET _template
+
+DELETE ddosset
+
+GET _template/packets/
+
+GET packets-2018-04-05
+GET _cat/indices?v
+
+
+POST /_aliases
+{
+    "actions" : [
+        {
+            "add" : {
+                 "index" : "packets-2018-04-05",
+                 "alias" : "alias1",
+                 "filter" : { "term" : { "user" : "kimchy" } }
+            }
+            
+        }
+    ]
+}
+
+
+POST /_aliases
+{
+    "actions" : [
+      {"remove_index": { "index": "packets-2018-04-05" } }
+      ]
+}
+
+GET packets*/_search
+{
+    "query": 
+    {
+      "match": {
+        "_id": "Aj5IomIBzCxXUE_4t5Zb"
+      } 
+    }
+}
+
+
+GET bank/_search?q=*
+
+
+GET bank/_search
+{
+    "query": 
+    {
+      "range": 
+      {
+        "balance":
+        {
+          "lte": 2000
+        }
+      } 
+    }
+}
+
+
+GET bank/_search
+{
+    "query": 
+    {
+      "match": {
+        "age": "35"
+      }
+    }
+}
+
+POST bank/_update_by_query
+{
+  "query": {
+    "match": {
+      "age": "35"
+    }
+  },
+  "script": {
+    "source": "ctx._source['gender']='F'"
+  }
+}
+
+POST bank/_update_by_query
+{
+  "query": {
+    "match": {
+      "firstname": "Baxter"
+    }
+  },
+  "script": {
+    "source": "ctx._source.age++"
+  }
+}
+
+POST bank/_update_by_query
+{
+  "query": 
+  {
+    "match": 
+    {
+      "firstname": "Baxter"
+    }
+  },
+  "script": {
+    "source": "ctx._source['lastname']='Whiteless'"
+  }
+}
+
+GET packets*/_search
+{
+  "query": {"match": {
+    "layers.frame.frame_frame_protocols": "arp"
+  }}
+}
+
+
+GET packets*/_search
+{
+  "size": 0,
+  "aggs": {
+    "group_by_state": {
+      "terms": {
+        "field": "layers.frame.frame_frame_protocols"
+      }
+    }
+  }
+}
+
+
+
+
+
+PUT _template/packets
+{
+  "index_patterns": "packets*",
+  "mappings": 
+	{
+    "pcap_file": 
+		{
+      "dynamic": "false",
+      "properties": 
+			{
+        "timestamp": 
+				{
+          "type": "date"
+        },
+        "layers": 
+				{
+          "properties": 
+          {
+            "frame": 
+						{
+		          "properties": 
+							{
+		            "frame_frame_len": 
+								{
+		              "type": "long"
+	              },
+		            "frame_frame_protocols": 
+								{
+               		"type": "keyword"
+             		}
+           		}
+	         	},
+						"eth": 
+						{
+            	"properties": 
+							{
+             		"eth_eth_src": 
+								{
+               		"type": "text",
+               		"fielddata": true
+           		  },
+             		"eth_src_eth_src_resolved": 
+								{
+             		  "type": "keyword"
+             		},
+             		"eth_eth_dst": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"eth_dst_eth_dst_resolved": 
+								{
+               		"type": "keyword"
+             		}
+           		}
+	         	},		
+	         	"ip": 
+						{
+	            "properties": 
+					    {
+  							"ip_ip_src": 
+  							{
+  	            	"type": "ip"
+  			        },
+  	          	"ip_ip_dst": 
+  							{
+  	            	"type": "ip"
+  	          	},
+  	          	"ip_ip_len": 
+  							{
+  	            	"type": "integer"
+  	          	},
+  	          	"ip_ip_ttl": 
+  							{
+  	            	"type": "integer"
+  	          	},
+  	          	"ip_ip_proto": 
+  							{
+  	            	"type": "integer"
+  	          	},
+  	          	"ip_ip_hdr_len": 
+  							{
+  	            	"type": "integer"
+  	          	}
+		     		  }
+      		  },
+	         	"udp": 
+						{
+           		"properties": 
+							{
+             		"udp_udp_srcport": 
+								{
+               		"type": "integer"
+             		},
+             		"udp_udp_dstport": 
+								{
+               		"type": "integer"
+             		},
+             		"udp_udp_length": 
+								{
+               		"type": "integer"
+             		}
+           		}
+	         	},
+	         	"tcp": 
+						{
+           		"properties": 
+							{
+             		"tcp_tcp_srcport": 
+								{
+               		"type": "integer"
+             		},
+             		"tcp_tcp_dstport": 
+								{
+               		"type": "integer"
+             		},
+             		"tcp_tcp_len": 
+								{
+               		"type": "integer"
+             		},
+             		"tcp_flags_tcp_flags_syn":
+             		{
+             		  "type":"integer"
+             		},
+             		"tcp_flags_tcp_flags_ack":
+             		{
+             		  "type":"integer"
+             		},
+             		"tcp_flags_tcp_flags_fin":
+             		{
+             		  "type":"integer"
+             		},
+             		"tcp_flags_tcp_flags_res":
+             		{
+             		  "type":"integer"
+             		}
+           		}
+	         	},
+	         	"http": 
+						{
+           		"properties": 
+							{
+             		"text_http_request_method": 
+								{
+               		"type": "keyword"
+             		},
+             		"http_http_host": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"http_http_user_agent": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"http_http_request_full_uri": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"http_http_content_type": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		}
+           		}
+	         	}
+      		}
+    		}
+   		}
+  	}
+	}
+}
+
+
+
+
+
+
+
+
+
+PUT _template/packets
+{
+  "index_patterns": "packets*",
+  "mappings": 
+	{
+        "network_packet": 
+		{
+        "properties": 
+            {
+                "timestamp": 
+				{
+                    "type": "date"
+                },
+                "frame_frame_len": 
+                {
+                    "type": "long"
+                },
+                "frame_protocols": 
+                {
+                    "type": "keyword",
+               		"fielddata": true
+                },
+                eth_type
+           		{
+               		"type": "text",
+               		"fielddata": true
+                }
+            }
+        }
+    }
+}

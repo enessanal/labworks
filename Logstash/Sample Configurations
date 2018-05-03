@@ -1,0 +1,92 @@
+﻿input { http { port => 8895 } } output { stdout { codec => rubydebug} }
+
+input { stdin { } } output { stdout { } }
+
+input {
+  file {
+    path => "/path/to/packets.json"
+    start_position => "beginning"
+  }
+}
+
+filter {
+    # Drop Elasticsearch Bulk API control lines
+    if ([message] =~ "{\"index") {
+        drop {}
+    }
+
+    json {
+        source => "message"
+        remove_field => "message"
+    }
+
+    # Extract innermost network protocol
+    grok {
+        match => {
+            "[layers][frame][frame_frame_protocols]" => "%{WORD:protocol}$"
+        }
+    }
+
+    date {
+        match => [ "timestamp", "UNIX_MS" ]
+    }
+}
+
+output {
+  elasticsearch {
+    hosts => "localhost:9200"
+    index => "packets-webserver01-%{+YYYY-MM-dd}"
+    document_type => "pcap_file"
+    manage_template => false
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+input 
+{ 
+    file
+    {
+        path => "C:\Users\ASUS\Documents\GitHub\newpp.csv"
+        start_position => "beginning"
+    }
+} 
+filter
+{
+    csv
+    {
+        source => "message"
+        columns => ["frame.protocols","frame.time","frame.len"]
+    }
+
+    # mutate
+    # {
+    #     remove_field => [ "message","host","@version","path"]
+    # }
+}
+output 
+{
+     tcp 
+     {
+         host => "127.0.0.1"
+         port => 8001
+         #codec => line
+         
+         
+         #codec => line {format => "%{message}"}
+         #codec => "json"
+        #codec => line { format => "hello" }
+      }
+}
+#   %{host} %{message}
+

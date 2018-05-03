@@ -1,0 +1,174 @@
+PUT _template/packets
+{
+  "index_patterns": "packets-*",
+  "mappings": 
+	{
+    "pcap_file": 
+		{
+      "dynamic": "false",
+      "properties": 
+			{
+        "timestamp": 
+				{
+          "type": "date"
+        },
+        "layers": 
+				{
+          "properties": 
+          {
+            "frame": 
+						{
+		          "properties": 
+							{
+		            "frame_frame_len": 
+								{
+		              "type": "long"
+	              },
+		            "frame_frame_protocols": 
+								{
+               		"type": "keyword"
+             		}
+           		}
+	         	},
+						"eth": 
+						{
+            	"properties": 
+							{
+             		"eth_eth_src": 
+								{
+               		"type": "text",
+               		"fielddata": true
+           		  },
+             		"eth_src_eth_src_resolved": 
+								{
+             		  "type": "keyword"
+             		},
+             		"eth_eth_dst": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"eth_dst_eth_dst_resolved": 
+								{
+               		"type": "keyword"
+             		}
+           		}
+	         	},		
+	         	"ip": 
+						{
+	            "properties": 
+					    {
+  							"ip_ip_src": 
+  							{
+  	            	"type": "ip"
+  			        },
+  	          	"ip_ip_dst": 
+  							{
+  	            	"type": "ip"
+  	          	},
+  	          	"ip_ip_len": 
+  							{
+  	            	"type": "integer"
+  	          	},
+  	          	"ip_ip_ttl": 
+  							{
+  	            	"type": "integer"
+  	          	},
+  	          	"ip_ip_proto": 
+  							{
+  	            	"type": "integer"
+  	          	},
+  	          	"ip_ip_hdr_len": 
+  							{
+  	            	"type": "integer"
+  	          	}
+		     		  }
+      		  },
+	         	"udp": 
+						{
+           		"properties": 
+							{
+             		"udp_udp_srcport": 
+								{
+               		"type": "integer"
+             		},
+             		"udp_udp_dstport": 
+								{
+               		"type": "integer"
+             		},
+             		"udp_udp_length": 
+								{
+               		"type": "integer"
+             		}
+           		}
+	         	},
+	         	"tcp": 
+						{
+           		"properties": 
+							{
+             		"tcp_tcp_srcport": 
+								{
+               		"type": "integer"
+             		},
+             		"tcp_tcp_dstport": 
+								{
+               		"type": "integer"
+             		},
+             		"tcp_tcp_len": 
+								{
+               		"type": "integer"
+             		},
+             		"tcp_flags_tcp_flags_syn":
+             		{
+             		  "type":"integer"
+             		},
+             		"tcp_flags_tcp_flags_ack":
+             		{
+             		  "type":"integer"
+             		},
+             		"tcp_flags_tcp_flags_fin":
+             		{
+             		  "type":"integer"
+             		},
+             		"tcp_flags_tcp_flags_res":
+             		{
+             		  "type":"integer"
+             		}
+           		}
+	         	},
+	         	"http": 
+						{
+           		"properties": 
+							{
+             		"text_http_request_method": 
+								{
+               		"type": "keyword"
+             		},
+             		"http_http_host": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"http_http_user_agent": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"http_http_request_full_uri": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		},
+             		"http_http_content_type": 
+								{
+               		"type": "text",
+               		"fielddata": true
+             		}
+           		}
+	         	}
+      		}
+    		}
+   		}
+  	}
+	}
+}
