@@ -39,6 +39,18 @@ echo "alias llsr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhSr --color=always\
 echo "alias llt=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFht --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
 echo "alias lltr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhtr --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
 
+
+echo "alias ..=\"cd ..\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias ...=\"cd ..\.." " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias ....=\"cd ..\..\.." " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias .....=\"cd ..\..\..\.." " | sudo tee --append /etc/bash.bashrc > /dev/null
+
+
+
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
 
 
